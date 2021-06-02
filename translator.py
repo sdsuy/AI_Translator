@@ -20,7 +20,11 @@ def englishtofrench(text):
     json_normalize(language_translator.list_identifiable_languages().get_result(), "languages")
 
     # French Translation
-    translation_response = language_translator.translate(text=text , model_id='en-fr')
+    try:
+        translation_response = language_translator.translate(text=text , model_id='en-fr')
+    except ValueError as error:
+        return error.__str__()
+    
     translation = translation_response.get_result()
     french_translation = translation['translations'][0]['translation']
 
