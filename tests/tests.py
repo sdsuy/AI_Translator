@@ -14,6 +14,6 @@ class TestEnglishToGerman(unittest.TestCase):
     def testNull(self): 
         self.assertEqual(englishtogerman(None), 'text must be provided') # test when None is given as input the output is 'text must be provided'.
     def testHello(self): 
-        self.assertEqual(englishtogerman('Hello'), 'Hallo') # test when 'Hello' is given as input the output is 'Bonjour'.
+        self.assertEqual(englishtogerman('Hello'), 'Hallo') # test when 'Hello' is given as input the output is 'Hallo'.
     def testGerman(self): 
-        self.assertEqual(englishtogerman('German'), 'Deutsch') # test when 'French' is given as input the output is 'Français'.
+        self.assertEqual(englishtogerman('German'), 'Deutsch') # test when 'German' is given as input the output is 'Deutsch'.
